@@ -82,13 +82,13 @@
                 <snapshotRepository>
                     <!-- 这个id需要在setting.xml中设置  -->
                     <id>snapshots</id>
-                    <name>OSS Snapshots Repository</name>
+                    <name>snapshots</name>
                     <!-- Deploy snapshot artifacts into repository -->
                     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
                     <id>releases</id>
-                    <name>OSS Staging Repository</name>
+                    <name>releases</name>
                     <!-- Deploy release artifacts into the staging repository -->
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
                 </repository>
