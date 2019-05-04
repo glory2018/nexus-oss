@@ -29,6 +29,16 @@
         <url>https://github.com/glory2018/nexus-oss.git</url>
         <tag>1.0</tag>
     </scm>
+    <dependencies>
+        <!--添加本地的jacob.jar包-->
+        <dependency>
+            <groupId>com.jacob</groupId>
+            <artifactId>jacob</artifactId>
+            <version>1.19</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/jacob.jar</systemPath>
+        </dependency>
+    </dependencies>
     <profiles>
         <profile>
             <id>release</id>
@@ -80,16 +90,11 @@
             </build>
             <distributionManagement>
                 <snapshotRepository>
-                    <!-- 这个id需要在setting.xml中设置  -->
-                    <id>snapshots</id>
-                    <name>snapshots</name>
-                    <!-- Deploy snapshot artifacts into repository -->
+                    <id>ossrh</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
-                    <id>releases</id>
-                    <name>releases</name>
-                    <!-- Deploy release artifacts into the staging repository -->
+                    <id>ossrh</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
                 </repository>
             </distributionManagement>
